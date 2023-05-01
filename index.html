@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MichiJuego</title>
+    <link rel="stylesheet" href="STYLES/style.css">
+</head>
+
+
+<body>
+    <h1>ReFinal MichiGatos FantaMix: Haunted Castle Revisited X4</h1> 
+
+    <div id="elige-gato">
+        <h2>ELIGE TU DIOS DE LA DESTRUCCIÓN: </h2>
+        
+        <label for="maxwell">MAXWELL</label>
+        <input type="radio" id="maxwell" name="Gato">
+
+        <label for="floppa">FLOPPA</label>
+        <input type="radio" id="floppa" name="Gato">
+
+        <label for="miguel">MIGUEL</label>
+        <input type="radio" id="miguel" name="Gato">
+        <!--
+        Maxwell -> Baile
+        Floppa -> machetazo
+        Miguel -> dinero
+        Gato lloron -> Dinero Baile
+        Gato Croc -> Dinero machetazo
+        Gato Saltarin -> Baile Machetazo
+        --> 
+
+        <button id="botonGato">Seleccionar</button>
+    </div>
+
+    <div id="elige-ataque">
+        <h2>ELIGE TU ATAQUE: </h2>
+
+        <div>
+            <b>TU GATO:</b><span id="GatoJugador"></span>
+            <span><span id="VidasJugador">10</span>/10</span>
+        </div>
+
+        <div>
+            <b>GATO ENEMIGO: </b><span id="GatoEnemigo"></span>
+            <span><span id="VidasEnemigo">10</span>/10</span>
+        </div>
+
+        <div>
+            <button id="boton-machete">Machete oxidado</button>
+            <button id="boton-dinero">Dinero</button>
+            <button id="boton-baile">Baile</button>
+        </div>
+    </div>
+
+    <div id="mensajes">
+        <p></p>
+    </div>
+
+    <button id="reset">Reiniciar</button>
+    
+
+    
+    <script src="./SRIPTS/Gatojueo.js"></script>
+</body>
+</html>
