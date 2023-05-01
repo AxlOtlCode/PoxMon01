@@ -10,8 +10,14 @@ function inicarJuego(){
     let sectionSeleccionarAtaque = document.getElementById('elige-ataque')
     sectionSeleccionarAtaque.style.display = 'none'
 
+    let sectionSeleccionarMascota = document.getElementById('elige-gato')
+    sectionSeleccionarMascota.style.display = 'none'
+
     let sectionReiniciar = document.getElementById('reset')
     sectionReiniciar.style.display = 'none'
+
+    let botonTitulo = document.getElementById('iniciar')
+    botonTitulo.addEventListener('click',PantallaTitulo)
 
     let botonGatoJugador = document.getElementById('botonGato')
     botonGatoJugador.addEventListener('click', seleccionarGatoJugador)
@@ -44,6 +50,15 @@ function ataqueBaile(){
     ataqueAleatorioEnemigo()
 }
 
+function PantallaTitulo() {
+    let sectionSeleccionarMascota = document.getElementById('elige-gato')
+    sectionSeleccionarMascota.style.display = 'block'
+
+    let sectionPantallaInicio = document.getElementById('Titulo')
+    sectionPantallaInicio.style.display = 'none'
+    
+}
+
 function seleccionarGatoJugador(){
     let sectionSeleccionarMascota = document.getElementById('elige-gato')
     sectionSeleccionarMascota.style.display = 'none'
@@ -60,17 +75,14 @@ function seleccionarGatoJugador(){
     if (inputMaxwell.checked) {
         SpanGatoJugador.innerHTML = 'MAXWELL'
         GatoJugador = 'MAXWELL'
-        alert('Maxwell Elegido')
     } 
     else if(inputFloppa.checked){
         SpanGatoJugador.innerHTML = 'FLOOPA'
         GatoJugador = 'FLOOPA'
-        alert('Floppa Elegido')
     }
     else if(inputMiguel.checked){
         SpanGatoJugador.innerHTML = 'MIGUEL'
         GatoJugador = 'MIGUEL'
-        alert('Miguel Elegido')
     }
     else{
         alert('Selecciona una mascota')
